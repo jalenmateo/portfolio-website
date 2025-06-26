@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { fadeInUp, fadeIn, scaleIn } from '@/utils/animations';
 
@@ -70,16 +70,6 @@ export default function Hero() {
             >
               <FaLinkedin />
             </motion.a>
-            {/* <motion.a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary transition-colors"
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <FaTwitter />
-            </motion.a> */}
           </motion.div>
           <motion.div 
             className="flex flex-col md:flex-row justify-center gap-4"
@@ -126,7 +116,7 @@ export default function Hero() {
               </Link>
             </motion.div>
             </motion.div>
-            
+
         </div>
       </div>
     </section>
