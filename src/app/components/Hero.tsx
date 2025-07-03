@@ -5,10 +5,11 @@ import Image from 'next/image';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { fadeInUp, fadeIn, scaleIn } from '@/utils/animations';
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Hero() {
   return (
-    <section className="py-28">
+    <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div 
@@ -31,13 +32,22 @@ export default function Hero() {
               Jalen Mateo
             </motion.span>
           </motion.h1>
-          <motion.p 
+          <motion.div 
             className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 mb-2 font-bold"
             {...fadeInUp}
             transition={{ delay: 0.4 }}
           >
-            Validation Engineer @ Silabs 
-          </motion.p>
+            <TypeAnimation
+              sequence={[
+                '',
+                1000,
+                'Validation Engineer @ Silicon Labs',
+                2000,
+              ]}
+              speed={50}
+              repeat={Infinity}
+            />
+          </motion.div>
           <motion.p 
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
             {...fadeInUp}
@@ -108,12 +118,14 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link
-                href="/contact"
-                className=" inline-block w-full bg-gray-500  md:w-auto text-gray-800 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+              <a
+                href="/JalenMateo__Resume.pdf"
+                download
+                className="inline-block w-full bg-gray-500 md:w-auto text-gray-800 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+                aria-label="Download Resume"
               >
                 Download My Resume
-              </Link>
+              </a>
             </motion.div>
             </motion.div>
 
@@ -121,4 +133,4 @@ export default function Hero() {
       </div>
     </section>
   );
-} 
+}

@@ -6,7 +6,11 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations'
 
-export default function Projects() {
+interface ProjectsProps {
+  featured?: boolean;
+}
+
+export default function Projects({ featured = false }: ProjectsProps) {
   return (
     <section className="py-20">
       <div className="container max-w-7xl mx-auto px-4">
@@ -23,7 +27,7 @@ export default function Projects() {
           initial="initial"
           animate="animate"
         >
-          {projects.map((project) => (
+          {(featured ? projects.slice(0, 6) : projects).map((project) => (
             <motion.article
               key={project.title}
               className="bg-white dark:bg-dark/50 rounded-lg shadow-md p-6"
@@ -77,28 +81,32 @@ export default function Projects() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                <motion.a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-                  whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaGithub className="h-5 w-5" />
-                  <span>Code</span>
-                </motion.a>
-                <motion.a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-                  whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaExternalLinkAlt className="h-5 w-5" />
-                  <span>Live Demo</span>
-                </motion.a>
+                {project.githubLink && (
+                  <motion.a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaGithub className="h-5 w-5" />
+                    <span>Code</span>
+                  </motion.a>
+                )}
+                {project.demoLink && (
+                  <motion.a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaExternalLinkAlt className="h-5 w-5" />
+                    <span>Live Demo</span>
+                  </motion.a>
+                )}
               </motion.div>
             </motion.article>
           ))}
@@ -106,4 +114,4 @@ export default function Projects() {
       </div>
     </section>
   )
-} 
+}

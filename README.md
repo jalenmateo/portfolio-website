@@ -5,14 +5,13 @@ This is my personal portfolio website, built to showcase my engineering work, pr
 ## 🚀 Features
 
 - Responsive design with modern UI/UX
-- Project showcase with filtering
-- Blog section for technical writing and ideas
-- Dark mode toggle
+- Project showcase
+- Blog section for writing and ideas
 - Built with Next.js and Tailwind CSS
 
 ## 📸 Preview
 
-[Live Site](https://yourdomain.com) — replace with your actual deployed URL.
+[Live Site](https://jalenmateo.com)
 
 ## 🛠️ Tech Stack
 
@@ -23,7 +22,7 @@ This is my personal portfolio website, built to showcase my engineering work, pr
 
 ## Acknowledgements
 
-This project was inspired and adapted from the excellent work by @mdalmamunit427 — devfolio-nextjs-portfolio-website. Many of the core layout ideas and component structures come from that repo. Big thanks!
+This project was inspired and adapted from the excellent work by @mdalmamunit427. Many of the core layout ideas and component structures come from their nextjs dev portfolio repo. Big thanks!
 
 ## Contact 
 Feel free to reach out via LinkedIn or email for collaborations, opportunities, or just a chat.

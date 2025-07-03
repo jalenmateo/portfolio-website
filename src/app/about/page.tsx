@@ -26,10 +26,8 @@ export default function About() {
         className="mb-16"
         {...fadeInUp}
       >
-        <p className="text-lg text-secondary max-w-3xl mx-auto text-center">
-          I&apos;m a passionate Full Stack Developer with expertise in building modern web applications.
-          With a strong foundation in both frontend and backend technologies, I create seamless
-          user experiences and robust server-side solutions.
+        <p className="text-lg text-secondary max-w-2xl mx-auto text-center">
+          I&apos;m a passionate and detail oriented engineer with a solid foundation in software development and electronics. Passionate about solving complex problems and widening my horizon, I have been delving into AI, and research. My projects and experiences have been a good mix of software and hardware, with a focus on creating innovative, integrated solutions.
         </p>
       </motion.section>
 
@@ -57,12 +55,15 @@ export default function About() {
             {...cardHover}
           >
             <FaCode className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Frontend</h3>
+            <h3 className="text-xl font-semibold mb-2">Software</h3>
             <ul className="text-secondary space-y-2">
-              <li>React / Next.js</li>
+              <li>Python</li>
+              <li>Julia</li>
+              <li>C</li>
+              <li>C++</li>
+              <li>MATLAB</li>
+              <li>Verilog HDL</li>
               <li>TypeScript</li>
-              <li>Tailwind CSS</li>
-              <li>HTML5 / CSS3</li>
             </ul>
           </motion.div>
           
@@ -72,12 +73,13 @@ export default function About() {
             {...cardHover}
           >
             <FaLaptopCode className="h-8 w-8 text-primary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Backend</h3>
+            <h3 className="text-xl font-semibold mb-2">Hardware</h3>
             <ul className="text-secondary space-y-2">
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>PostgreSQL</li>
-              <li>MongoDB</li>
+              <li>PCB Design</li>
+              <li>CAD</li>
+              <li>3D Printing</li>
+              <li>Electronics</li>
+              <li>Robotics</li>
             </ul>
           </motion.div>
           
@@ -90,9 +92,13 @@ export default function About() {
             <h3 className="text-xl font-semibold mb-2">Tools & Others</h3>
             <ul className="text-secondary space-y-2">
               <li>Git / GitHub</li>
-              <li>Docker</li>
-              <li>AWS</li>
-              <li>CI/CD</li>
+              <li>OpenCV</li>
+              <li>Machine Learning</li>
+              <li>Japanese (N2), Tagalog</li>
+              <li>Figma</li>
+              <li>LaTeX</li>
+              <li>PCB Design Softwares</li>
+              <li>Electronics Simulations</li>
             </ul>
           </motion.div>
         </motion.div>
