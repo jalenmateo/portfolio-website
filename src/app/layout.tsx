@@ -16,8 +16,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "jalenmateo.com | docunmenting Jalen's journey through code, prototypes and thoughts!",
+  title: "jalenmateo.com | documenting Jalen's journey through code, prototypes and thoughts!",
   description: "jalenmateo.com is a portfolio and personal blog website for Jalen.",
+  openGraph: {
+    title: "jalenmateo.com | documenting Jalen's journey through code, prototypes and thoughts!",
+    description: "jalenmateo.com is a portfolio and personal blog website for Jalen.",
+    url: 'https://jalenmateo.com',
+    siteName: "Jalen's Portfolio & Blog",
+    images: [
+      {
+        url: '/JalenPhotooo.png',
+        width: 1200,
+        height: 630,
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "jalenmateo.com | documenting Jalen's journey through code, prototypes and thoughts!",
+    description: "jalenmateo.com is a portfolio and personal blog website for Jalen.",
+    images: ['/JalenPhotooo.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://jalenmateo.com',
+  }
 };
 
 export default function RootLayout({
