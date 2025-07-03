@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "jalenmateo.com | Portfolio Website using Next.js, Tailwind CSS, and Framer Motion",
-  description: "jalenmateo.com is a portfolio website for developers to showcase their projects and skills.",
+  title: "jalenmateo.com | docunmenting Jalen's journey through code, prototypes and thoughts!",
+  description: "jalenmateo.com is a portfolio and personal blog website for Jalen.",
 };
 
 export default function RootLayout({
