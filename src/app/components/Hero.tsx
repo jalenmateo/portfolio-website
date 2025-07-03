@@ -17,7 +17,7 @@ export default function Hero() {
             {...scaleIn}
             transition={{ delay: 0.2 }}
           >
-            <Image src="/JalenPhotooo.png" alt="Profile" width={100} height={100} className="rounded-full mb-4 w-40 h-40 object-cover ring-2 ring-primary" />
+            <Image src="/JalenPhotooo.png" alt="Profile" width={100} height={100} className="rounded-full mb-4 w-46 h-54 object-cover ring-2 ring-primary" />
           </motion.div>
           <motion.h1 
             className="text-4xl md:text-6xl font-bold mb-6"
@@ -119,7 +119,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
             >
               <a
-                href="/JalenMateo__Resume.pdf"
+                href="/JalenMateo___Resume.pdf"
                 download
                 className="inline-block w-full bg-gray-500 md:w-auto text-gray-800 dark:text-white px-8 py-3 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
                 aria-label="Download Resume"

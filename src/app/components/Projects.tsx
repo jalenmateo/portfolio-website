@@ -2,6 +2,7 @@
 
 import { projects } from '@/contents/projects'
 import Image from 'next/image'
+import Link from 'next/link'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations'
@@ -18,7 +19,7 @@ export default function Projects({ featured = false }: ProjectsProps) {
           className="text-3xl font-bold mb-12 text-center"
           {...fadeInUp}
         >
-          Featured Projects
+          Latest Projects
         </motion.h2>
 
         <motion.div 
@@ -110,6 +111,25 @@ export default function Projects({ featured = false }: ProjectsProps) {
               </motion.div>
             </motion.article>
           ))}
+        </motion.div>
+
+        <motion.div 
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link
+              href="/projects"
+              className="inline-block bg-primary text-white px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+            >
+              View All Projects
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>

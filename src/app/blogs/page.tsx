@@ -2,6 +2,7 @@
 
 import { blogs } from '@/contents/blogs'
 import Link from 'next/link'
+import Image from 'next/image'
 import { FaCalendarAlt, FaClock } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations'
@@ -31,6 +32,15 @@ export default function Blogs() {
             variants={fadeInUp}
             {...cardHoverSmall}
           >
+            <div className="relative aspect-video">
+              <Image
+                src={blog.image}
+                alt={blog.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
             <div className="p-6">
               <motion.h2 
                 className="text-xl font-semibold mb-2"
@@ -79,4 +89,4 @@ export default function Blogs() {
       </motion.div>
     </div>
   )
-} 
+}

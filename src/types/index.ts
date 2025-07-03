@@ -13,4 +13,6 @@ export interface Blog {
   date: string;
   readTime: string;
   slug: string;
+  image: string;
+  content: string;
 }

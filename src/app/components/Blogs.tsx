@@ -2,6 +2,7 @@
 
 import { blogs } from '@/contents/blogs';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, cardHoverSmall } from '@/utils/animations';
@@ -23,14 +24,24 @@ export default function Blogs() {
           initial="initial"
           animate="animate"
         >
-          {blogs.map((blog) => (
+          {blogs.slice(0, 3).map((blog) => (
             <motion.article
               key={blog.slug}
-              className="bg-white dark:bg-dark/50 rounded-lg shadow-md p-6"
+              className="bg-white dark:bg-dark/50 rounded-lg shadow-md overflow-hidden"
               variants={fadeInUp}
               {...cardHoverSmall}
             >
-              <Link href={`/blogs/${blog.slug}`}>
+              <div className="relative aspect-video mb-4">
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-6">
+                <Link href={`/blogs/${blog.slug}`}>
                 <motion.h3 
                   className="text-xl font-semibold mb-2 hover:text-primary transition-colors"
                   whileHover={{ x: 5 }}
@@ -68,6 +79,7 @@ export default function Blogs() {
                   {blog.readTime}
                 </motion.span>
               </motion.div>
+              </div>
             </motion.article>
           ))}
         </motion.div>
@@ -93,4 +105,4 @@ export default function Blogs() {
       </div>
     </section>
   );
-} 
+}
