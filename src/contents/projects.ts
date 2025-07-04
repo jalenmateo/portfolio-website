@@ -215,7 +215,7 @@ export const projects: Project[] = [
         description: 'Made a simple math game that relies on mental calculations using the given cards drawn at random.',
         technologies: ['CSS', 'JS', 'HTML'],
         githubLink: '',
-        demoLink: '',
+        demoLink: 'https://codepen.io/Otaku-9Gagger/full/rNEmyqj',
         image: '/projects/CardGameMath.png',
       }
 

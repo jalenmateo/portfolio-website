@@ -94,28 +94,32 @@ export default function Projects() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                <motion.a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-                  whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaGithub className="h-5 w-5" />
-                  <span>Code</span>
-                </motion.a>
-                <motion.a
-                  href={project.demoLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
-                  whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <FaExternalLinkAlt className="h-5 w-5" />
-                  <span>Live Demo</span>
-                </motion.a>
+                {project.githubLink && (
+                  <motion.a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaGithub className="h-5 w-5" />
+                    <span>Code</span>
+                  </motion.a>
+                )}
+                {project.demoLink && (
+                  <motion.a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaExternalLinkAlt className="h-5 w-5" />
+                    <span>Live Demo</span>
+                  </motion.a>
+                )}
               </motion.div>
             </div>
           </motion.div>
@@ -123,4 +127,4 @@ export default function Projects() {
       </motion.div>
     </div>
   )
-} 
+}
